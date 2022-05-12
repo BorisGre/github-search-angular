@@ -1,0 +1,96 @@
+.repo-header{
+    margin-left: 5%
+}
+
+.repo-description{
+    margin-left: 7%;
+    height:27%;
+    width: 90%;
+    line-height: 1.15;
+    word-wrap: break-word;
+    /*text-overflow: ;*/
+}
+
+.score-icon, .fork-icon{
+    width: 14px;
+}
+
+.repo-tags{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: flex-start;
+  width: 95%;
+  flex-wrap: wrap;
+  list-style: none;
+  height: 28%;
+
+  overflow-y: hidden;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.repo-tag {
+    padding: 0% 0.5% 0.5% 0.5%;
+    flex-basis: content;
+    border-radius: 15px;
+    background-color: darkcyan;
+    height: 30%;
+    margin-top: 1%;
+}
+
+.repo-tag:not(:first-child){
+    margin-left: 1%;
+}
+
+.repo-tag a{
+    color: white;
+    text-decoration: none;
+}
+
+.repo-stat{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: flex-start;
+    width: 100%;
+    flex-wrap: wrap;
+    list-style: none;
+    margin-top: 1%;
+}
+
+.repo-stat li{
+    flex-basis: content;
+    padding: 0.2%;   
+}
+
+.repo-stat li:not(:first-child){
+    margin-left: 1%;
+}
+
+.owner-avatar img{
+    width: 180px;
+}
+
+.repo-left-side{
+    min-width: 20%;
+    /*flex-shrink: 1;*/
+}
+
+.repo-right-side{
+    width: 75%;
+    /*flex-basis: content;
+    min-width: 80%;*/
+    /*flex-shrink: 2;*/
+}
+
+.repo-left-side ul{
+    list-style: none;
+}
+
+.owner-login{
+    width: 100%;
+    text-align: center;
+}
+
+

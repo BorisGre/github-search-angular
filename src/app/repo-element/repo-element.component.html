@@ -1,0 +1,21 @@
+<div class="repo-left-side">
+    <ul>
+        <li class="owner-avatar"><a href="{{repo.owner.html_url}}"><img src="{{repo.owner.avatar_url}}" alt="{{repo.owner.login}}"></a></li>
+        <li class="owner-login"><span>{{repo.owner.login}}</span></li>
+    </ul>  
+</div>
+<div class="repo-right-side">   
+    <h3 class="repo-header"><a href="{{repo.html_url}}">{{repo.full_name}}</a></h3>
+        <div  class="repo-description">{{repo.description}}</div>
+    <ul class="repo-tags">
+        <li *ngFor="let tag of (repo.topics)" class="repo-tag"><a href="https://github.com/topics/{{tag}}">{{tag}}</a></li>
+    </ul>   
+    <ul class="repo-stat">
+        <li><img src="assets/free-icon-star-outline-32172.png" class="score-icon"> {{repo.score}}</li>
+        <li><img src="assets/git.png" class="fork-icon">{{repo.forks}}</li>
+        <li>{{repo.language ? 'Lang: '+repo.language : ''}}</li>
+        <li>{{repo.license?.name}}</li>
+        <li>Updated: {{repo.updated_at | date:'medium'}}</li>
+        <li>Issues: {{repo.open_issues == 0 ? repo.open_issues : repo.open_issues+' need help'}}</li>
+    </ul>
+</div>
