@@ -1,25 +1,26 @@
 <main>
     <h1>Github repos search</h1>
     <section class="search">
-      <!--app-form-component [formUpLink]="childForm"></app-form-component-->
-      <!--app-form-component></app-form-component-->
       <form [formGroup]="form" (ngSubmit)="onSubmit()">
-        <div *ngIf="request.invalid"> Name is too short. </div>
+        <!--div *ngIf="request.invalid" class="requestValidation"> Name is too short. </div-->
         <input formControlName="request" placeholder="enter something">
         <button type="submit">Find</button>
      </form>
     </section>
   <section *ngIf="showRepos">
     <ul class="repositiories">
-      <!--li>{{ repos | json }}</li-->
-      <!--{{repos | json}}-->
-      <li *ngFor="let repo of (repos.items)"> 
-       <!--(repos | async | json)"-->
+      <li *ngFor="let repo of (repos.items)" class="repository-container"> 
          <app-repo-element [repo]="repo" class="repository"></app-repo-element>
       </li>
     </ul>
   </section>
+  <section *ngIf="showRepos">
+    <ul class="pagination">
+        <!--li><button #previousPage type="button"  (click)="onPrevious()" [attr.disabled]="firstPage">Previous</button></li>
+        <li><button #nextPage type="button" value="next" (click)="onNext()" [attr.disabled]="lastPage">Next</button></li-->
+        <li><button #previousPage type="button"  (click)="onPrevious()">Previous</button></li>
+        <li><span class="currentPageClass">{{currentPage}}</span></li>
+        <li><button #nextPage type="button" value="next" (click)="onNext()">Next</button></li>
+    </ul>
+  </section>
 </main>
-
-
-
